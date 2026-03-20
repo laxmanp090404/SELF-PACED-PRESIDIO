@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7fb;
+}
+
+/* Hide radios */
+input[type="radio"] {
+    display: none;
+}
+
+.tab-container {
+    width: 500px;
+}
+
+/* tabs */
+.tabs {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+label:hover {
+    background: #eef4ff;
+}
+
+/* active tab is highlighted */
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"] {
+    background: #2595f7;
+    color: white;
+}
+
+main {
+    width: 500px;
+    margin-top: 15px;
+}
+
+/* content styles */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* show corresponding tab content */
+#tab1:checked ~ main .contentoftab1,
+#tab2:checked ~ main .contentoftab2 {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}

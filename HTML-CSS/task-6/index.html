@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabbedCointent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tab-container">
+
+    <!-- radio input later hidden -->
+    <input type="radio" name="tabs" id="tab1" checked>
+    <input type="radio" name="tabs" id="tab2">
+
+    <!-- tabs using labels -->
+    <div class="tabs">
+        <label for="tab1">View Tab1</label>
+        <label for="tab2">View Tab2</label>
+    </div>
+
+    <!-- Content as per tab -->
+    <main>
+        <div class="tabcontent contentoftab1">
+            <h3>Tab 1</h3>
+            <p>This is content for Tab 1.</p>
+        </div>
+
+        <div class="tabcontent contentoftab2">
+            <h3>Tab 2</h3>
+            <p>This is content for Tab 2.</p>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
