@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slider">
+
+  <!-- radio inputs hidden for beter ui-->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
+  <!-- slides-->
+  <div class="slides">
+    <div class="slide">
+      <img src="./assets/image1.png" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="./assets/image2.png" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="./assets/image3.png" alt="Slide 3">
+    </div>
+  </div>
+
+  <!-- nav dots -->
+   <!-- activates corresponding image or slide  -->
+  <div class="navigation">
+    <label for="slide1"></label>
+    <label for="slide2"></label>
+    <label for="slide3"></label>
+  </div>
+
+</div>
+
+</body>
+</html>
