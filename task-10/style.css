@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+
+header{
+    height: 10vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+nav a:hover{
+    color: #18003e;
+    font-weight: bold;
+}
+
+/* styling active links  */
+
+/* home alone active when no target or home alone  */
+body:not(:has(:target)) .homelink a,
+body:has(#home:target) .homelink a{
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+body:has(#about:target) .aboutlink a{
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+body:has(#services:target) .servicelink a{
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+body:has(#contact:target) .contactlink a{
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+.pagecontainer{
+    position: relative;
+    height: 80vh;
+}
+
+/* page general style  */
+.page{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease;
+}
+
+/* home default  */
+body:not(:has(:target)) #home{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* showing target page  */
+#home:target,
+#about:target,
+#services:target,
+#contact:target{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* background color changes for visibility  */
+#home{ background: #f5f3ff; }
+#about{ background: #ede9fe; }
+#services{ background: #ddd6fe; }
+#contact{ background: #c4b5fd; }
+
+
+footer{
+    height: 10vh;
+    background: #7c3aed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
