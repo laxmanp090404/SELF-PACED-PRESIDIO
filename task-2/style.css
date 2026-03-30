@@ -3,8 +3,10 @@
     padding: 0;
     margin: 0;
 }
-section{
+.cardcontainer{
     display: flex;
+    flex-direction: column;
+    gap: 5vw;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -47,7 +49,7 @@ section{
     font-size: larger;
     padding: 50px 10px 50px 10px;
 }
-.animedetails h2{
+.cardtitle{
     font-size:xx-large;
 }
 
