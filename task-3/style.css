@@ -48,7 +48,7 @@
     background-color: rgb(221, 221, 221);
     
 }
-.middle span{
+.company-day{
     display: flex;
     align-items: center;
     gap: 5px;
